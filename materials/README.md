@@ -1,106 +1,136 @@
-# 📦 Lab Materials
+# 🔐 Acme Security Incident Lab
 
-This folder contains all materials needed for your security incident investigation.
+> An open-source security assessment for Security Analyst positions
 
-## 📁 Files Overview
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./submissions/README.md)
 
-### Log Files
+## 🎯 Purpose
 
-**⚠️ IMPORTANT: Use these EXACT files without modification**
+This lab evaluates your ability to:
+- **Analyze security incidents** from multiple log sources
+- **Design secure architectures** with defense-in-depth
+- **Document and communicate** findings professionally
+- **Think critically** about real-world security scenarios
 
-| File | Description | Timezone | Rows | Format |
-|------|-------------|----------|------|--------|
-| `api_logs.csv` | Mobile API requests | PST (UTC-8) | ~30 | CSV |
-| `email_logs.csv` | Email gateway logs | UTC | ~10 | CSV |
-| `web_logs.csv` | Web application logs | EST (UTC-5) | ~25 | CSV |
-| `waf_logs.csv` | WAF alerts | UTC | ~15 | CSV |
+## 📖 Scenario
 
-### Documentation
+You're a security analyst investigating a coordinated attack on **Acme Financial Services** trading platform. The attack spans multiple vectors:
 
-| File | Description |
-|------|-------------|
-| `current_architecture.png` | Current system architecture diagram |
-| `api_docs.pdf` | API endpoint documentation |
-| `security_test_schedule.pdf` | Scheduled security testing information |
+- 📧 **Phishing campaign** targeting employees
+- 🌐 **Web application** SQL injection
+- 📱 **Mobile API** broken access control
 
-## 🔐 File Integrity
+Your mission: Analyze the incident, identify vulnerabilities, propose architectural improvements, and present your findings.
 
-**SHA-256 Checksums:**
-```
-[CHECKSUMS WILL BE ADDED AFTER FILES ARE CREATED]
-api_logs.csv: b83b3021aa32666afbf4924d3fa34bb5654f783871469b21ae50e4abfcfbe0fc
-email_logs.csv: 7647e9fbe7f94ebf58b67cdc4c73cebcd167b0a8431039145900982ab2dba9d0
-web_logs.csv: b166c5f8fd9f2584ef8f06e2a51da1ef562db56c54e01d0678f7462aa4202445
-waf_logs.csv: 0ce0555f0f205922234fc1d5685cf8ec0248f95271fd676d60402be7b58d48d3
-```
+## ⏱️ Lab Details
 
-**Verify file integrity before starting:**
-```bash
-sha256sum api_logs.csv
-# Expected: <hash>
-```
+**Deliverables:**
+- Written report (PDF, max 5 pages)
+- Video presentation (10-15 minutes)
 
-⚠️ **Any file modification will be detected and may result in disqualification.**
+**Deadline:** Monday, 09:00 (Istanbul time)
 
-## 📋 What You'll Find
+## 🚀 Getting Started
 
-### In the Logs
-- Normal user activity
-- Suspicious patterns
-- Attack indicators
-- False positives (be careful!)
-- Missing information (identify gaps)
+### Step 1: Review Materials
+Navigate to [`materials/`](./materials/) and download:
+- Log files (API, Web, Email, WAF)
+- Architecture diagram
+- API documentation
+- Supporting materials
 
-### Key Challenges
-- **Multiple timezones** - Logs use different time references
-- **Noise and signal** - Distinguish real attacks from normal activity
-- **Correlation required** - No single log tells the whole story
-- **Incomplete data** - Some information is intentionally missing
+### Step 2: Investigate
+Analyze the logs, correlate events, and reconstruct the attack timeline.
 
-## 🎯 Investigation Tips
+### Step 3: Design
+Propose an improved security architecture addressing identified gaps.
 
-1. **Start with the big picture** - What systems are involved?
-2. **Timeline everything** - Normalize timezones first
-3. **Cross-reference** - Correlate events across log sources
-4. **Question assumptions** - Not all anomalies are attacks
-5. **Document evidence** - Every claim needs log references
-6. **Read all materials** - Documentation contains important context
+### Step 4: Document
+Create a professional incident report with findings and recommendations.
 
-## 🛠️ Recommended Tools
+### Step 5: Present
+Record a video walkthrough of your analysis and recommendations.
 
-You can use any tools you're comfortable with:
-- **Analysis:** Excel, Python (pandas), grep, awk
-- **Diagrams:** draw.io, Lucidchart, PowerPoint
-- **Timeline:** Spreadsheets, specialized forensic tools
+### Step 6: Submit
+Follow the [submission guidelines](./submissions/README.md) to submit your work.
 
-## ⚠️ Common Mistakes
+## 📊 What We're Looking For
 
-- ❌ Ignoring timezone differences
-- ❌ Treating all anomalies as attacks
-- ❌ Not reading documentation
-- ❌ Working from a single log source
-- ❌ Making assumptions without evidence
+✅ **Technical Skills**
+- Log analysis and correlation
+- Attack pattern recognition
+- Security framework knowledge (ISO 27001, NIST, OWASP)
 
-## 📚 Useful References
+✅ **Architecture Design**
+- Defense-in-depth strategy
+- Practical security controls
+- Risk-based prioritization
 
-- [MITRE ATT&CK Framework](https://attack.mitre.org/)
-- [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-- [OWASP API Security Top 10](https://owasp.org/www-project-api-security/)
-- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
-- [ISO/IEC 27001:2022](https://www.iso.org/standard/27001)
+✅ **Communication**
+- Clear, structured documentation
+- Professional presentation
+- Evidence-based recommendations
 
-## 🔍 Getting Started
+✅ **Attention to Detail**
+- Thorough investigation
+- Cross-referencing multiple sources
+- No assumptions without evidence
 
-1. Download all files
-2. Verify checksums
-3. Read documentation first
-4. Open logs in your preferred tool
-5. Start investigating!
+## 🎯 Scoring
 
-## ❓ Questions?
+This lab uses a comprehensive scoring system with transparent evaluation criteria.
 
-Open an issue or email `security-hiring@acme.com`
+**Scoring approach:**
+- Evidence-based assessment
+- Professional work standards
+- Focus on approach and reasoning over "perfect" answers
+
+## 🔒 Privacy Options
+
+This is an **open-source lab** with transparent submission via GitHub:
+
+### Public Submission via Pull Request
+- Fork this repo and submit via Pull Request
+- Your work becomes part of your public portfolio
+- Great for showcasing skills to other employers
+- Evaluation process is visible but scores remain confidential
+
+**Note:** All submissions are reviewed with the same evaluation standards.
+
+## ❓ FAQ
+
+**Q: Can I use AI tools like ChatGPT?**  
+A: Tools are fine for research, but the analysis must be your own. Over-reliance on AI will be obvious and penalized.
+
+**Q: Can I search online for help?**  
+A: Absolutely! Research MITRE ATT&CK, OWASP, and security frameworks. This mirrors real-world work.
+
+**Q: What if I can't finish in time?**  
+A: Submissions must be received by **Monday at 09:00 (Istanbul time)**. Plan accordingly.
+
+**Q: Is there a single "correct" answer?**  
+A: No. We evaluate your approach, reasoning, and professionalism. Multiple solutions are valid.
+
+**Q: What tools should I use?**  
+A: Use whatever you're comfortable with. Excel, Python, grep, text editors - all are fine. We evaluate your analysis, not your tools.
+
+**Q: How long does the evaluation take?**  
+A: Submissions are due **Monday at 09:00 (Istanbul time)**. Results will be announced shortly after.
+
+**Q: Can I update my submission after submitting?**  
+A: Yes, if you submit via Pull Request, you can push updates before the deadline. We evaluate the latest version.
+
+**Q: What if I get stuck?**  
+A: That's normal! Document your thought process and explain what you tried. We value problem-solving approach over perfect answers.
+
+**Q: Is this only for experienced analysts?**  
+A: No! This lab is designed for junior to mid-level candidates. If you're learning security, this is a great opportunity to practice.
+
+**Q: Can I include this in my portfolio?**  
+A: Absolutely! If you submit publicly, it's already part of your GitHub portfolio.
 
 ---
 
-**Good luck with your investigation!** 🔍🕵️
+**Ready to begin?** Head to [`materials/`](./materials/) to start your investigation! 🔍
+
+⭐ Star this repo if you find it useful for learning!
